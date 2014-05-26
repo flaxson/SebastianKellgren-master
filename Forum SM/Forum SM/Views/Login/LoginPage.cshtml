@@ -1,0 +1,34 @@
+﻿@model Forum_SM.Models.User /*Måste veta att det är av modellen användare, Modellen user ligger i mappen forum_SM och sen Models*/
+@{
+    ViewBag.Title = "Logga in";
+}
+
+<nav>
+    <ul class="menu">
+        <li><a href="/Thread/IndexThread">HEM</a></li>
+        <li><a href="/Home/Index">SKAPA TRÅD</a></li>
+        <li><a href="/Contact/Contact">KONTAKTA OSS</a></li>
+        <li class="active"><a href="/Login/LoginPage">LOGGA IN</a></li>
+    </ul>
+</nav>
+
+ @if(ViewBag.User == null)
+            {
+                     <div id="login">
+                              @using (Html.BeginForm("Login", "Login")) // Skickar det här till login som ligger vid loggin
+                                 {
+                                   <p>Användarnamn</p>@Html.EditorFor(x => x.UserName) //Skapar två forms som man loggar in med användarnamn
+                                   <p>Lösenord</p> @Html.PasswordFor(x => x.Password) //och lösenord
+                                   <input type="submit" value="Logga in" /> //Knapp med texten Login
+                                 } 
+                             @Html.ValidationSummary(false)  <!--Error message skrivs ut som skapades i LoginControllern-->
+                    </div> 
+
+                    <div id="triangleup"></div>
+            }
+            
+            @if (ViewBag.User != null)
+{
+<div id="login">Du är redan inloggad som @ViewBag.User.UserName</div>
+                <div id="triangleup"></div>
+}

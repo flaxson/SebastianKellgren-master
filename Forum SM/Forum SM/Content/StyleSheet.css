@@ -1,0 +1,331 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background-image: url('/Images/bakgrund.jpg');
+}
+#container{
+    width: 100%;
+}
+
+/*=====MENU=====*/
+nav {
+	padding: 40px 880px 0 0;
+	float: right;
+	display: block;
+	z-index: 99;
+}
+.menu > li {
+	margin-left: 7px;
+	float: left;
+	position: relative;
+    border-radius: 4px;
+    /*Får menyerna att sakta dyka uppp*/
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	
+}
+.menu  a {
+	color: #343434;
+    font-size: 14px;
+    line-height: 20px;
+	text-decoration: none;
+}
+.menu > li > a {
+	display: block;
+	padding: 12px 14px;
+}
+.menu > li.sfHover , .menu > li:hover, .menu li.active {
+	background: #87c9e3;
+}
+.menu > li.sfHover > a, .menu > li > a:hover, .menu li.active a {
+	color: #fff;
+}
+.menu li li.sfHover > a, .menu li li a:hover, .menu li li a.active {
+	color: #fff;
+}
+
+/*=====FOOTER=====*/
+footer{
+    position: fixed;
+    background-color: #87c9e3;
+    width: 800px;
+    height: 50px;
+    font-size: 18px;
+    bottom: 0;
+    margin-left: 450px;
+    color: #fff;
+}
+footer p{
+    padding-top: 17px;
+    padding-left: 70px;
+}
+
+/*=====LOGINPAGE=====*/
+#login{
+    margin: 25px 0 0 880px;
+    float:left;
+    background-color: #87c9e3;
+    padding: 20px;
+    color: #fff;
+    border-radius: 4px;
+}
+#triangleup {
+	width: 0;
+	height: 0;
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	border-bottom: 26px solid #87c9e3;
+    margin: 87px 0 0 975px;
+    position: absolute;
+}
+#username{
+    margin: 50px 0 0 260px;
+    position: absolute;
+    font-size: 20px;
+}
+
+/*=====KONTAKTA OSS=====*/
+#contact{
+    width: 350px;
+    margin: 200px 0 0 670px;
+    font-size: 20px;
+    position: absolute;
+}
+#star-five {
+   margin: 50px 0;
+   position: relative;
+   display: block;
+   color: #87c9e3;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid #87c9e3;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+   margin: 580px 0 0 720px;
+   position: absolute;
+}
+#star-five:before {
+   border-bottom: 80px solid #87c9e3;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+#star-five:after {
+   position: absolute;
+   display: block;
+   color: #87c9e3;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid #87c9e3;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}
+
+/*=====LOGGA UT=====*/
+#logoutnav {
+	padding: 38px 0 0 125px;
+	float: left;
+	display: block;
+	z-index: 99;
+}
+#logout{
+    padding: 0 200px 0 0;
+	float: left;
+	display: block;
+	z-index: 99;
+}
+#logout > li {
+	margin-left: 7px;
+	float: left;
+	position: relative;
+    border-radius: 4px;
+    /*Får menyerna att sakta dyka uppp*/
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	
+}
+#logout  a {
+	color: #343434;
+    font-size: 14px;
+    line-height: 20px;
+	text-decoration: none;
+}
+#logout > li > a {
+	display: block;
+	padding: 12px 14px;
+}
+#logout > li.sfHover , #logout > li:hover, #logout li.active {
+	background: #87c9e3;
+}
+#logout > li.sfHover > a, #logout > li > a:hover, #logout li.active a {
+	color: #fff;
+}
+#logout li li.sfHover > a, #logout li li a:hover, #logout li li a.active {
+	color: #fff;
+}
+
+/*=====GUBBE=====*/
+#gubbe{
+    margin: 150px 0 0 400px;
+    position: absolute;
+}
+#huvud{
+	width: 200px;
+	height: 200px;
+	background: #87c9e3;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+    margin: 100px 0 0 200px;
+    position: absolute;
+}
+#kropp{
+	width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 200px solid #87c9e3;
+    margin: 280px 0 0 200px;
+    position: absolute;
+}
+#arm{
+	width: 350px;
+	height: 20px;
+	background: #87c9e3;
+    margin: 350px 0 0 130px;
+    position: absolute;
+}
+#benv{
+	width: 30px;
+	height: 120px;
+	background: #87c9e3;
+    margin: 480px 0 0 200px;
+    position: absolute;
+}
+#benh{
+	width: 30px;
+	height: 120px;
+	background: #87c9e3;
+    margin: 480px 0 0 370px;
+    position: absolute;
+}
+#bubbla{
+   width: 250px;
+   height: 170px;
+   background: #87c9e3;
+   position: absolute;
+   -moz-border-radius:    20px;
+   -webkit-border-radius: 20px;
+   border-radius:         20px;
+   margin: 120px 0 0 440px;
+}
+#triangelb{
+	width: 0;
+	height: 0;
+	border-top: 30px solid transparent;
+	border-right: 55px solid #87c9e3;
+	border-bottom: 30px solid transparent;
+    margin: 190px 0 0 400px;
+    position: absolute;
+}
+#krav{
+    width: 200px;
+    height: 140px;
+    font-size: 25px;
+    position: absolute;
+    margin: 320px 0 0 870px;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+}
+
+/*=====TRÅDAR OCH KOMMENTARER=====*/
+#add{
+    margin: 410px 0 0 950px;
+    position: absolute;
+    font-size: 20px;
+}
+#addtext{
+    position: absolute;
+    margin: 280px 0 0 865px;
+    width: 200px;
+    font-size: 18px;
+}
+textarea{
+    margin: 150px 0 0 290px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+#addthread{
+    margin: 380px 0 0 348px;
+    position: absolute;
+}
